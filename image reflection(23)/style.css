@@ -1,0 +1,39 @@
+.bg {
+  background-image: url(1.jpg);
+  width: 80vw;
+  height: 60vh;
+  margin: 50px auto;
+  background-position: right bottom;
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.6);
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg::after {
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  height: inherit;
+  width: inherit;
+  transform: rotateX(180deg);
+}
+
+.bg::before {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(231, 48, 11, 0.2),
+    #2073a6 60%,
+    #1f48ea
+  );
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  height: inherit;
+  width: inherit;
+  z-index: 100;
+}
